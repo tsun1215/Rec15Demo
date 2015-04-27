@@ -180,7 +180,7 @@ public class ChatServerImpl extends Thread implements ChatServer {
             // TODO: Add the server timestamp to the message received. Note:
             // Message#setServerTimestamp was created for you in the Message
             // class.
-
+            msg.setServerTimestamp(new Date());
             // Synchronize because we are iterating through all clients in a
             // thread
             synchronized (clients) {
